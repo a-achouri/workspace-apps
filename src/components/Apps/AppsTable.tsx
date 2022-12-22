@@ -14,7 +14,7 @@ function AppsTable() {
     }
   return (
     <div className='center'>
-        <h1>achouri list</h1>
+        <h1>Apps list</h1>
         <AppsForm onSubmit={addApps}/> 
     </div>
   )

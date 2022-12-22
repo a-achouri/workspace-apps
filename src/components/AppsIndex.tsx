@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Responsive, WidthProvider } from "react-grid-layout";
+import Menu from './menu/Menu';
 import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
 function AppsIndex() {
@@ -31,28 +32,27 @@ function AppsIndex() {
     // }
 
     
-    const layout = [
-        { i: "1", x: 0, y: 0, w: 1, h: 1 },
-        { i: "2", x: 1, y: 0, w: 1, h: 1 },
-        { i: "3", x: 2, y: 0, w: 1, h: 1 },
-        { i: "4", x: 3, y: 0, w: 1, h: 1 },
-        { i: "5", x: 4, y: 0, w: 1, h: 1 }
-      ]; 
+    // const layout = [
+    //     { i: "a", x: 0, y: 0, w: 1, h: 1 },
+    //     { i: "b", x: 1, y: 0, w: 1, h: 1 },
+    //     { i: "c", x: 2, y: 0, w: 1, h: 1 },
+    //     { i: "d", x: 3, y: 0, w: 1, h: 1 },
+    //     { i: "e", x: 4, y: 0, w: 1, h: 1 }
+    //   ]; 
       
 
 
     return (
         <>
+        <Menu/>
             <button className='bg-[#a38e81]' onClick={() => addItems()} >add</button>
 
             <GridLayout
                 className="layout  grid-cols-4 "
-                layouts={{ lg: layout }}
+                // layouts={{ lg: layout }}
                 breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
                 cols={{ lg: 4, md: 10, sm: 6, xs: 4, xxs: 2 }}
                 rowHeight={300}
-                
-                
                 
                 >
 
